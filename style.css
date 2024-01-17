@@ -192,6 +192,9 @@ input {
   margin-left: 16px;
   margin-top: 8px;
 }
+.logo-section a h2 {
+  font-family: saol Display;
+}
 
 .logo-section.active {
   mix-blend-mode: difference;
@@ -208,7 +211,11 @@ input {
   justify-content: flex-start;
   align-items: start;
   gap: 10px;
-  font-family: GT America Expanded;
+}
+.global-text span {
+  font-family: GT America Extended;
+  font-size: 12px;
+  color: var(--white);
 }
 .global-text .worship {
   display: flex;
@@ -307,11 +314,22 @@ input {
     transform: translateY(-93px);
   }
 }
-@media screen and (max-width: 372px) {
+@media screen and (max-width: 429px) {
   .global-text {
     text-transform: uppercase;
     position: absolute;
-    top: 139px;
+    top: 119px;
+    display: flex;
+  }
+  .global-text.active {
+    transform: translateY(-120px);
+  }
+}
+@media screen and (max-width: 389px) {
+  .global-text {
+    text-transform: uppercase;
+    position: absolute;
+    top: 133px;
     display: flex;
   }
   .global-text.active {
@@ -323,6 +341,7 @@ input {
   top: 0;
   right: 0;
   display: flex;
+  align-items: center;
   padding: 20px;
   letter-spacing: 1px;
   z-index: 3;
@@ -334,11 +353,15 @@ input {
   gap: 40px;
 }
 .nav-bar ul li {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 500;
   cursor: pointer;
   z-index: 2;
+  color: var(--white);
   font-family: GT America Expanded;
+}
+.nav-bar ul li:hover {
+  color: crimson;
 }
 
 .video-section {
@@ -353,6 +376,12 @@ input {
   object-fit: cover;
   height: inherit;
   width: 100%;
+}
+.video-section img {
+  object-fit: cover;
+  height: inherit;
+  width: 100%;
+  filter: brightness(80%);
 }
 
 .heading-link {
@@ -1228,9 +1257,8 @@ input {
 
 .quote {
   width: 100%;
-  padding: 6rem 2rem;
+  padding: 6rem 1rem;
   margin: 6rem 0;
-  background: url(./assets/images/backgrounds/trench-bg.jpg);
   background-color: var(--white);
   display: flex;
   justify-content: center;
@@ -1811,7 +1839,7 @@ input {
 .footer-section-2 {
   border-top: 0.5px solid #404040;
   border-bottom: 0.5px solid #404040;
-  padding: 6rem 0;
+  padding: 5rem 0;
   display: flex;
   flex-wrap: wrap;
   gap: 60px;
@@ -1843,6 +1871,7 @@ input {
   color: #bdbbb8;
   border-radius: 0;
   font-size: 12px;
+  caret-color: #fff;
 }
 .footer-section-2 .up-to-date form input::placeholder {
   font-weight: 700;
@@ -1901,7 +1930,7 @@ input {
 .footer-section-2 .footer-navigation .about-us ul a:hover {
   color: var(--cornflowerblue);
 }
-@media (max-width: 690px) {
+@media (max-width: 1060px) {
   .footer-section-2 .footer-navigation {
     justify-self: start;
     justify-content: start;
@@ -1918,7 +1947,6 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 0 12px 0;
   gap: 20px;
 }
 .footer-section-3 .legal-creditail {

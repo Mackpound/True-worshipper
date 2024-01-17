@@ -1,0 +1,61 @@
+
+.head-link {
+    position: absolute;
+    bottom: -36px;
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    /* background: #000; */
+    z-index: 2;
+    color: white;
+    mix-blend-mode: difference;
+  }
+
+  .quote .quote-note h4 strong{
+    font-family: GT America Extended;
+    font-size: 18px;
+  }
+  @media (width < 506px) {
+    .quote .quote-note{
+        width: 90%;
+    }
+      .quote .quote-note h4 strong{
+        font-family: GT America Extended;
+        font-size: 15px;
+      }
+  }
+  .x .intro h3{
+    font-family: Saol Text;
+  }
+  .why-we-give{
+    padding: 5rem 12rem;
+    font-family: Saol Display;
+  }
+  @media (width < 990px) {
+    .why-we-give{
+        padding: 5rem 3rem;
+    }
+  }
+  @media (width < 570px) {
+    .why-we-give{
+        padding: 5rem 2rem;
+    }
+  }
+  .why-we-give h1{
+    font-family: inherit;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 96px;
+  }
+  .why-we-give p{
+    font-family: Saol Text;
+    font-weight: 500;
+    line-height: 38px;
+    font-size: 18px;
+  }
+  @media (width < 570px) {
+    .hero-container{
+        padding: 3rem 1rem;
+    }
+  }
