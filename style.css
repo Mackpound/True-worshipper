@@ -86,7 +86,7 @@ html {
 }
 
 body {
-  user-select: none;
+  user-select: auto;
   transition: all 0.3s;
   background-color: var(--white);
 }
@@ -99,6 +99,22 @@ a {
   cursor: pointer;
   /* default font size */
   font-size: 12px;
+}
+
+h1::selection, h2::selection {
+  color: var(--black);
+  background-color: chocolate;
+  padding: 20px;
+}
+
+h3::selection, h4::selection,
+h5::selection, h6::selection, p::selection,
+span::selection, b::selection, strong::selection,
+button::selection, i::selection, div::selection,
+a::selection, img::selection, ::selection {
+  color: var(--white);
+  background-color: var(--sky-blue);
+  padding: 20px;
 }
 
 button {
@@ -148,13 +164,8 @@ input {
 }
 
 .logo-bar {
-  position: absolute;
-  top: 0px;
-  left: 0;
   display: flex;
   align-items: flex-start;
-  flex-shrink: 2;
-  padding: 20px;
   color: var(--white);
   text-transform: uppercase;
   font-size: 18px;
@@ -162,6 +173,7 @@ input {
 .logo-bar h2 {
   color: var(--white);
   mix-blend-mode: difference;
+  margin-bottom: -8px;
 }
 .logo-bar h2.active {
   transform: translateY(-60px);
@@ -182,35 +194,31 @@ input {
   position: fixed;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   width: 50%;
-  margin-left: 55px;
+  margin-left: 85px;
   z-index: 3;
+  height: 190px;
+  padding-top: 15px;
+  gap: 18px;
 }
 .logo-section a {
-  display: flex;
-  gap: 10px;
-  margin-left: 16px;
-  margin-top: 8px;
+  width: 100%;
+  text-decoration: none;
 }
 .logo-section a h2 {
-  font-family: saol Display;
-}
-
-.logo-section.active {
-  mix-blend-mode: difference;
+  font-family: Saol Display;
 }
 
 .global-text {
   text-transform: uppercase;
-  position: absolute;
-  top: 83px;
-  padding-top: 20px;
-  margin-left: 26px;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: start;
-  gap: 10px;
+  width: 120px;
+  padding-left: 2px;
+  font-family: GT America Expanded;
 }
 .global-text span {
   font-family: GT America Extended;
@@ -223,9 +231,6 @@ input {
   gap: 1px;
   line-height: 17px;
   height: 0px;
-  top: 38px;
-  left: -15px;
-  position: absolute;
   overflow: hidden;
 }
 .global-text .worship a {
@@ -238,10 +243,6 @@ input {
 }
 .global-text .worship a:hover {
   color: var(--white);
-}
-
-.global-text.active {
-  transform: translateY(-70px);
 }
 
 .menu-global-text {
@@ -307,7 +308,7 @@ input {
   .global-text {
     text-transform: uppercase;
     position: absolute;
-    top: 104px;
+    top: 98px;
     display: flex;
   }
   .global-text.active {
@@ -836,28 +837,43 @@ input {
   justify-content: space-between;
   align-items: start;
   gap: 40px;
+  margin-top: 2rem;
   flex-wrap: wrap;
 }
 .hero-content .text {
-  width: 90%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
+.hero-content .text h1 {
+  font-family: GT America Expanded;
+}
+.hero-content .text span {
+  font-weight: 600;
+}
+.hero-content .text span, .hero-content .text p {
+  font-family: GT America Extended;
+}
 .hero-content .text .btn-border {
   position: relative;
-  padding: 0 12px;
+  padding: 12px;
   margin: 10px 0 0 10px;
   display: block;
-  width: 171px;
+  width: 181px;
   height: 41px;
   border: 2px solid aqua;
 }
 .hero-content .text .btn-border button {
   position: absolute;
-  width: 172px;
+  font-family: GT America Expanded;
+  font-size: 12px;
+  width: 180px;
+  padding: 12px;
   top: -10px;
   left: -10px;
+  background: aqua;
+  text-transform: uppercase;
 }
 .hero-content .text .btn-border button:hover {
   transform: translateX(0);
@@ -865,7 +881,12 @@ input {
 .hero-content .text .btn-border:hover {
   transform: translateX(8px);
 }
-@media (width < 466px) {
+@media (width < 1366px) {
+  .hero-content .text {
+    width: 70%;
+  }
+}
+@media (width < 666px) {
   .hero-content .text {
     width: 100%;
   }

@@ -1,0 +1,15 @@
+#header{
+    height: 10vh;
+    background: transparent;
+}
+.logo-section{
+    transform: translateY(0);
+    mix-blend-mode: difference;
+}
+.global-text.active{
+    transform: translateY(0);
+  }
+  
+.ul-main{
+    mix-blend-mode: difference;
+}

@@ -12,6 +12,14 @@
     mix-blend-mode: difference;
   }
 
+  .logo-section.active{
+    transform: translateY(0);
+    mix-blend-mode: difference;
+}
+  .global-text.active{
+    transform: translateY(0);
+  }
+
   .quote .quote-note h4 strong{
     font-family: GT America Extended;
     font-size: 18px;
