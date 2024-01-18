@@ -159,7 +159,7 @@ input {
 #header {
   position: relative;
   overflow: hidden;
-  height: 100dvh;
+  height: 100vh;
   background: var(--black-russian);
 }
 
@@ -316,7 +316,7 @@ input {
   top: 0;
   z-index: 1;
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
   object-fit: cover;
 }
 .video-section video {
@@ -334,7 +334,7 @@ input {
 .heading-link {
   position: absolute;
   bottom: 30px;
-  height: 100dvh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: end;
