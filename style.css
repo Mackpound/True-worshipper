@@ -282,61 +282,6 @@ input {
   height: 130px;
 }
 
-@media screen and (max-width: 1192px) {
-  .global-text {
-    text-transform: uppercase;
-    position: absolute;
-    top: 79px;
-    display: flex;
-  }
-  .global-text.active {
-    transform: translateY(-70px);
-  }
-}
-@media screen and (max-width: 622px) {
-  .global-text {
-    text-transform: uppercase;
-    position: absolute;
-    top: 99px;
-    display: flex;
-  }
-  .global-text.active {
-    transform: translateY(-90px);
-  }
-}
-@media screen and (max-width: 452px) {
-  .global-text {
-    text-transform: uppercase;
-    position: absolute;
-    top: 98px;
-    display: flex;
-  }
-  .global-text.active {
-    transform: translateY(-93px);
-  }
-}
-@media screen and (max-width: 429px) {
-  .global-text {
-    text-transform: uppercase;
-    position: absolute;
-    top: 119px;
-    display: flex;
-  }
-  .global-text.active {
-    transform: translateY(-120px);
-  }
-}
-@media screen and (max-width: 389px) {
-  .global-text {
-    text-transform: uppercase;
-    position: absolute;
-    top: 133px;
-    display: flex;
-  }
-  .global-text.active {
-    transform: translateY(-120px);
-  }
-}
 .nav-bar .ul-main {
   position: fixed;
   top: 0;
