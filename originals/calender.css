@@ -29,7 +29,7 @@
     align-items: center;
     justify-content: flex-start;
 }
- .main-calender-content{
+.main-calender-container, .main-calender-content{
     width: 90%;
     border: 1px solid var(--light-dark);
     border-radius: 4px;
@@ -39,7 +39,10 @@
     /* align-items: end; */
     gap: 16px;
 }
-.main-calender-content .calender-img{
+.main-calender-content:hover{
+    transform: scale(0.9);
+}
+.main-calender-container .calender-img, .main-calender-content .calender-img{
     width: 100%;
     height: 90%;
     border-radius: 4px;
@@ -48,6 +51,7 @@
 .calender-img img{
     inline-size: 100%;
     aspect-ratio: 16/18;
+    pointer-events: none;
     /* object-fit: cover; */
 }
 .layout{
