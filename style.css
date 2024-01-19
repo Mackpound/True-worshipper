@@ -979,6 +979,7 @@ input {
 .display-img img {
   inline-size: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .display-img .display-email-query {
   position: absolute;
@@ -1007,8 +1008,7 @@ input {
   font-family: Saol Display;
   font-size: 58px;
   font-weight: 200;
-  letter-spacing: 1.4px;
-  line-height: 18px;
+  letter-spacing: 1px;
 }
 @media (width < 1212px) {
   .display-img .display-email-query h2 {
