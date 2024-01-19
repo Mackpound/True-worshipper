@@ -1,0 +1,100 @@
+#header{
+    height: 90px;
+    background: transparent ;
+}
+.calender-wrapper{
+    transform: translateY(-90px);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* height: 100vh; */
+    justify-content: center;
+    background: var(--arial-black);
+}
+.calender-container
+{
+    width: 100%;
+    padding: 120px 0 30px 0;
+    width: 90%;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: center;
+    /* height: 100%; */
+}
+.calender-container .main-calender{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+ .main-calender-content{
+    width: 90%;
+    border: 1px solid var(--light-dark);
+    border-radius: 4px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: end; */
+    gap: 16px;
+}
+.main-calender-content .calender-img{
+    width: 100%;
+    height: 90%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.calender-img img{
+    inline-size: 100%;
+    aspect-ratio: 16/18;
+    /* object-fit: cover; */
+}
+.layout{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.layout h6, .layout h4{
+    color: #FFF;
+    mix-blend-mode: difference;
+    font-family: Saol Text;
+}
+.layout .save{
+    display: inline-block;
+    /* width: 30%; */
+    /* float: right; */
+    justify-self: end;
+    padding: 6px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--light-dark);
+    font-family: GT America Extended;
+    color: #FFF;
+    mix-blend-mode: difference;
+}
+.submaincalender {
+    width: 50%;
+    display: grid;
+    grid-gap: 10px;
+    /* grid-auto-flow: column; */
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    flex-wrap: wrap;
+}
+@media (width < 931px) {
+    .calender-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+    .calender-container .main-calender{
+        width: 90%;
+    }
+    .submaincalender{
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+
+    }
+}
