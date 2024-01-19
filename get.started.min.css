@@ -2,6 +2,7 @@
     height: 10vh;
     background: transparent;
 }
+
 .logo-section{
     transform: translateY(0);
     mix-blend-mode: difference;
@@ -157,3 +158,109 @@
     font-family: GT America Extended;
     font-size: 14px;
 }
+
+.welcometochurch
+{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 40px;
+    margin: 7rem 0;
+}
+.welcometext{
+    padding: 1rem 2rem;
+    order: 0;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.welcometext h1{
+   margin-left: -3rem;
+    font-family: saol display;
+    font-size: 60px;
+    color: #fFF;
+    mix-blend-mode: difference;
+}
+.welcometext .innertext{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--arial-black);
+    font-family: GT America Extended;
+}
+@media (width < 1100px) {
+    .welcometext .innertext{
+        width: 90%;
+    }
+}
+.innertext strong, .innertext span{
+    font-family: inherit;
+    color: var(--arial-black);
+} 
+.innertext li{
+    font-family: GT America Expanded;
+}
+.innertext li .worship a{
+    color: var(--arial-black);
+}
+.innertext li .worship a:hover{
+    color: var(--sky-blue);
+}
+
+.welcomeimage{
+    orphans: 1;
+    width: 50%;
+
+}
+.welcomeimage img{
+    inline-size: 100%;
+    object-fit: cover;
+    height: 800px;
+}
+@media (width < 719px) {
+    .welcometochurch{
+        flex-direction: column;
+        
+    }
+    .welcometext{
+        order: 1;
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+    .welcometext h1{
+        margin-left: -2rem;
+        font-size: 50px;
+    }
+    .welcomeimage{
+        order: 0;
+        width: 100%;
+    }
+    .welcomeimage img{
+        height: 400px;
+    }
+}
+
+/* O JESUS
+
+A JOURNEY TO FOLLOWING JESUS
+LAUNCH
+LEARN MORE
+LAUNCH is a journey designed for people who want to explore what it means to follow Jesus. LAUNCH is a great step for people who have recently put their faith in Jesus and those still exploring what it means to follow him.
+
+
+MOVING FROM DEATH TO LIFE
+BAPTISM
+LEARN MORE
+Baptism is a public celebration of moving from death to life through faith in Jesus Christ. We believe that baptism is one of the most powerful ways we can carry the name of Jesus to the world, and the first step of obedience, as we follow the example of Jesus through baptism.
+
+
+PRACTICAL, THEOLOGICAL, DISCIPLESHIP
+CORE
+LEARN MORE
+CORE is the vehicle by which people at Passion City Church become theologically trained, spiritually mature, and equipped to live out the Christian life. Click here to learn more and to RSVP for an upcoming course.
+
+
+BEC */
