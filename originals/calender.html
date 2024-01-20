@@ -197,7 +197,7 @@
                         <img src="../assets/images/calender/Jan.jpg"  alt="CALENDER">
                     </div>
                    <div class="layout">
-                    <h4 class="text-uppercase">january</h4>
+                    <h4 class="text-uppercase data-month" data-month>january</h4>
                     <!-- <a  class="save" href="../assets/images/banners/BbG_Core-7893-scaled.jpg" download>Save</a> -->
                    </div>
                 </div>
@@ -397,15 +397,22 @@
 
         dataMainCalender.forEach((imagedata) => {
             imagedata.addEventListener("click", (e)=> {
-                var imagedata = e.target
-                const childimage = imagedata.children[0];
+                // var imagedata = e.target
+                const childimage = imagedata.querySelector(":nth-child(1) > :nth-child(1)");
                 
+                var chains = imagedata.querySelector(":nth-child(2) > :nth-child(1)")
+                var csf = chains.innerText;
                 var childImageSRC = childimage.src;
-                
+                console.log(childImageSRC, csf)
                 dataCalenderIMGS.forEach((calender) => {
                     const calIMG = calender.children[0]
                     calIMG.src = childImageSRC;
+                    if(calIMG.src === childImageSRC){
+                        calIMG.src = calIMG.src;
+                    }
                 })
+                let mT = document.querySelector(".data-month");
+                mT.innerText = csf;
             })
         })
    </script>
