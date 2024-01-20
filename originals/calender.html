@@ -194,7 +194,7 @@
             <div  class="main-calender">
                 <div class="main-calender-container">
                     <div class="calender-img" data-calender-IMGs>
-                        <img src="../assets/images/calender/Jan.jpg"  alt="CALENDER">
+                        <img src="../assets/images/calender/Jan.PNG"  alt="CALENDER">
                     </div>
                    <div class="layout">
                     <h4 class="text-uppercase data-month" data-month>january</h4>
@@ -396,23 +396,24 @@
         let dataCalenderIMGS = document.querySelectorAll("[data-calender-IMGs]")
 
         dataMainCalender.forEach((imagedata) => {
-            imagedata.addEventListener("click", (e)=> {
+            imagedata.addEventListener("click", ()=> {
                 // var imagedata = e.target
                 const childimage = imagedata.querySelector(":nth-child(1) > :nth-child(1)");
+                var childImageSRC = childimage.src;
                 
                 var chains = imagedata.querySelector(":nth-child(2) > :nth-child(1)")
                 var csf = chains.innerText;
-                var childImageSRC = childimage.src;
-                console.log(childImageSRC, csf)
+                let mT = document.querySelector(".data-month");
+                mT.innerText = csf;
+                
                 dataCalenderIMGS.forEach((calender) => {
                     const calIMG = calender.children[0]
                     calIMG.src = childImageSRC;
-                    if(calIMG.src === childImageSRC){
-                        calIMG.src = calIMG.src;
+                    if(childImageSRC === undefined){
+                        childImageSRC = calIMG.src;
                     }
+                    // calender.innerHTML = ` <img src="${childImageSRC}"  alt="CALENDER">`;
                 })
-                let mT = document.querySelector(".data-month");
-                mT.innerText = csf;
             })
         })
    </script>

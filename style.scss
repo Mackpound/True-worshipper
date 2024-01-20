@@ -1457,7 +1457,8 @@ html{
         z-index: 1;
         width: 50%;
         border-top: 1px solid var(--light-white);
-        color: var(--light-white);
+        // color: var(--light-white);
+        font-family: Saol, Display;
         li{
             position: relative;
             list-style: none;
@@ -1475,7 +1476,7 @@ html{
             h2{
                 color: var(--white);
                 mix-blend-mode: difference;
-                font-family: 'Playfair Display', serif;
+                font-family: saol, display;
                 font-size: 37px;
                 letter-spacing: 1px;
                 cursor: pointer;
@@ -1502,6 +1503,7 @@ html{
             background-color: var(--white);
             // z-index: -1;
         }
+
         .clin:hover{
             color: var(--sky-blue);
             li::before{
@@ -1594,9 +1596,11 @@ html{
             display: flex;
             flex-direction: column;
             justify-content: start;
-            padding: 40px 20px;
+            align-items: center;
+            padding: 50px 20px 40px 20px;
             gap: 20px;
             width: 368px;
+            z-index: 2;
             height: 389px;
             padding-left: 3rem;
             overflow: hidden;
@@ -1605,19 +1609,23 @@ html{
                 font-family: GT America Expanded;
                 font-weight: 700;
                 color: #00A3CF;
+                align-self: flex-start;
             }
             h3{
                 font-family: saol Display;
                 color: var(--black);
                 font-size: 35px;
+                align-self: flex-start;
             }
             h5{
                 font-family: GT America Extended;
                 font-size: 14px;
+                align-self: flex-start;
                 color: var(--black-russian);
             }
             span{
                 color: #00B7E3;
+                align-self: flex-start;
                 font-family: "GT America Extended", Georgia, 'Times New Roman', Times, serif;
                 font-size: 14px;
                 font-weight: 600;
@@ -1631,8 +1639,8 @@ html{
             top: 0;
             right: 0;
             opacity: 0;
-            transform: translateY(80px);
-            width: 95%;
+            transform: skewY(-4deg) translateY(38px);
+            width: 93%;
             height: 90%;
             z-index: -1;
             background: rgba(180,180,180, 0.2);
@@ -1643,7 +1651,7 @@ html{
             }
             .hovering{
                 opacity: 1;
-                transform: rotate(-0.5deg) translateY(-10px);
+                transform: skewY(-4deg) translateY(12px);
             }
         }
         @media (max-width:690px){
