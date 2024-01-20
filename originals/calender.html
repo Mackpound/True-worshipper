@@ -51,7 +51,7 @@
     <script type="text/javascript" async src="https://www.gstatic.com/recaptcha/releases/u-xcq3POCWFlCr3x8_IPxgPu/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-CDkofqMo6hSAPRh2TZj9HOLusb5hze4z6vkh6YWvd810w+KTuT5lucK9hQN36Xh7"></script>
     <style type="text/css" id="CookieConsentStateDisplayStyles">.cookieconsent-optin,.cookieconsent-optin-preferences,.cookieconsent-optin-statistics,.cookieconsent-optin-marketing{display:block;display:initial;}.cookieconsent-optout-preferences,.cookieconsent-optout-statistics,.cookieconsent-optout-marketing,.cookieconsent-optout{display:none;}</style>
 </head>
-<body>
+<body class="bg-dark">
 
     <!-- header body wrapper -->
    <div id="body-content" class="lg:fixed top-0 inset-x-0 z-40 w-full h-full position-relative">
@@ -193,8 +193,8 @@
         <div class="calender-container">
             <div  class="main-calender">
                 <div class="main-calender-container">
-                    <div class="calender-img">
-                        <img src="../assets/images/calender/Jan.jpg"  alt="CALENDER" data-calender-img>
+                    <div class="calender-img" data-calender-IMGs>
+                        <img src="../assets/images/calender/Jan.jpg"  alt="CALENDER">
                     </div>
                    <div class="layout">
                     <h4 class="text-uppercase">january</h4>
@@ -389,6 +389,26 @@
         </div>
    </footer>
    
+
+   <script>
+        let dataCalenderImg = document.querySelectorAll("[data-calender-img]")
+        let dataMainCalender = document.querySelectorAll("[data-main-calender]")
+        let dataCalenderIMGS = document.querySelectorAll("[data-calender-IMGs]")
+
+        dataMainCalender.forEach((imagedata) => {
+            imagedata.addEventListener("click", (e)=> {
+                var imagedata = e.target
+                const childimage = imagedata.children[0];
+                
+                var childImageSRC = childimage.src;
+                
+                dataCalenderIMGS.forEach((calender) => {
+                    const calIMG = calender.children[0]
+                    calIMG.src = childImageSRC;
+                })
+            })
+        })
+   </script>
    
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8QJ4ZP5"
