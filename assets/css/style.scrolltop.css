@@ -2,41 +2,7 @@
     mix-blend-mode: difference;
 }
 
-    /* .global-text{
-        text-transform: uppercase;
-        display: inline-flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: start;
-        width: 120px;
-        padding-left: 2px;
-        font-family:  GT America Expanded;
-        span{
-            font-family: GT America Extended;
-            font-size: 12px;
-            color: var(--white);
-        }
-        
-        .worship{
-            display: flex;
-            flex-direction: column;
-            gap: 1px;
-            line-height: 17px;
-            height: 0px;
-            overflow: hidden;
-            a{
-                font-family:  GT America Expanded;
-                text-decoration: none;
-                color: var(--light-white);
-                font-weight: 500;
-                font-size: 12px;
-                letter-spacing: 0.4px;
-            }
-            a:hover{
-                color: var(--white);
-            }
-        }
-    } */
+   
     .global-text.active{
         
         transform: translateY(-70px);
