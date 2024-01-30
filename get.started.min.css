@@ -231,6 +231,7 @@
         padding: 1rem 2rem;
     }
     .welcometext h1{
+        text-align: left;
         margin-left: -2rem;
         font-size: 50px;
     }

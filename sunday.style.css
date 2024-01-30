@@ -270,6 +270,7 @@ html{
   width: 90%;
   height: 600px;
   padding: 0;
+  object-fit: cover;
   pointer-events: none;
 }
 .ryth-sect-two{
@@ -281,9 +282,25 @@ html{
   padding-right: 7rem;
   font-family: 'GT America Extended', Georgia, 'Times New Roman', Times, serif;
 }
+.rount-1{
+  order: 1;
+}
+.rount-2{
+  width: 60%;
+  order: 0;
+  padding-left: 5rem;
+}
 @media (max-width: 990px) {
   .ryth-sect-two{
     padding-right: 1rem;
+  }
+  .rount-2{
+    order: 1;
+    padding-left: 2rem;
+  }
+  .rount-1{
+    order: 0;
+
   }
 }
 .ryth-sect-two p, .ryth-sect-two strong{
@@ -319,6 +336,7 @@ html{
   font-size: 16px;
   color: var(--sky-blue);
 }
+
 @media (max-width: 894px) {
   .rythms-container{
     flex-wrap: wrap;
@@ -341,3 +359,4 @@ html{
     padding-left: 3rem;
   }
 }
+

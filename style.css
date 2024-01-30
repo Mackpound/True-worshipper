@@ -118,6 +118,20 @@ a::selection, img::selection, ::selection {
   padding: 20px;
 }
 
+img {
+  scale: 0.4;
+  opacity: 0.3;
+  animation: scaleOut linear forwards;
+  animation-timeline: view();
+  animation-range: entry;
+}
+
+@keyframes scaleOut {
+  to {
+    scale: 1 1;
+    opacity: 1;
+  }
+}
 button {
   border-radius: 20px;
   border: 0;
