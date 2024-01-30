@@ -232,12 +232,14 @@ input {
   display: flex;
   flex-direction: column;
   gap: 1px;
+  opacity: 0;
   line-height: 17px;
+  transform: translateY(-20px);
   height: 0px;
   overflow: hidden;
 }
 .global-text .worship a {
-  font-family: GT America Expanded;
+  font-family: GT America Extended;
   text-decoration: none;
   color: var(--light-white);
   font-weight: 500;
@@ -259,10 +261,12 @@ input {
   font-family: GT America Expanded;
 }
 .menu-global-text .worship {
+  opacity: 0;
   display: flex;
   flex-direction: column;
   gap: 2px;
   height: 0px;
+  transform: translateY(-20px);
   padding: 0 12px 0 0;
   position: absolute;
   top: 30px;
@@ -270,7 +274,7 @@ input {
   overflow: hidden;
 }
 .menu-global-text .worship a {
-  font-family: GT America Expanded;
+  font-family: GT America Extended;
   text-decoration: none;
   color: var(--light-white);
   font-weight: 500;
@@ -282,8 +286,10 @@ input {
 }
 
 .global-text:hover .worship, .menu-global-text:hover .worship {
+  opacity: 1;
+  transform: translateY(0);
   bottom: 0px;
-  height: 130px;
+  height: 90px;
 }
 
 .nav-bar .ul-main {
@@ -1715,6 +1721,20 @@ input {
     display: none;
   }
 }
+.page-link {
+  display: flex;
+  width: 100%;
+  margin: 5rem 0;
+  justify-content: center;
+  align-items: center;
+}
+.page-link .page-link-content {
+  justify-self: center;
+  width: 90%;
+  background-color: #d9d9d9;
+  transform: skewY(-2deg);
+}
+
 .footer-container {
   background-color: #0E1216;
   display: flex;

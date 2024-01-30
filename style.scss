@@ -260,11 +260,13 @@ html{
             display: flex;
             flex-direction: column;
             gap: 1px;
+            opacity: 0;
             line-height: 17px;
+            transform: translateY(-20px);
             height: 0px;
             overflow: hidden;
             a{
-                font-family:  GT America Expanded;
+                font-family:  GT America Extended;
                 text-decoration: none;
                 color: var(--light-white);
                 font-weight: 500;
@@ -288,10 +290,12 @@ html{
         font-family:  GT America Expanded;
         
         .worship{
+            opacity: 0;
             display: flex;
             flex-direction: column;
             gap: 2px;
             height: 0px;
+            transform: translateY(-20px);
             padding:0 12px 0 0;
             position: absolute;
             top: 30px;
@@ -299,7 +303,7 @@ html{
             // background-color: #6495ed;
             overflow: hidden;
             a{
-                font-family:  GT America Expanded;
+                font-family:  GT America Extended;
                 text-decoration: none;
                 color: var(--light-white);
                 font-weight: 500;
@@ -313,8 +317,10 @@ html{
     }
     .global-text:hover, .menu-global-text:hover{
         .worship{
+            opacity: 1;
+            transform: translateY(0);
             bottom: 0px;
-            height: 130px;
+            height: 90px;
         }
     }
 
@@ -1849,6 +1855,25 @@ html{
         }
         .bb-absolute{
             display: none;
+        }
+    }
+
+    // page
+    .page-link{
+        // z-index: 2;
+        display: flex;
+        width: 100%;
+        margin: 5rem 0;
+        justify-content: center;
+        align-items: center;
+        // background-color: #000;
+        // transform: skewY(-2deg);
+
+        .page-link-content{
+            justify-self: center;
+            width: 90%;
+            background-color: #d9d9d9;
+            transform: skewY(-2deg);
         }
     }
 
