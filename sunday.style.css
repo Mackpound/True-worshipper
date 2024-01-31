@@ -299,6 +299,11 @@ html{
   font-family: 'GT America Extended', Georgia, 'Times New Roman', Times, serif;
   counter-reset: step;
 }
+.w-60{
+  width: 60%;
+  /* background: #fff !important; */
+  text-align: start;
+}
 .rount-1{
   order: 1;
 }
@@ -321,13 +326,16 @@ html{
   }
 }
 .ryth-sect-two p, .ryth-sect-two strong{
-  font-size: 18px;
+  font-size: 16px;
   font-family: inherit;
   line-height: 30px;
   color: inherit;
 }
+.ryth-sect-two strong{
+  font-weight: 600;
+}
 .ryth-sect-two span{
-  font-size: 18px;
+  font-size: 16px;
   font-family: inherit;
   line-height: 20px;
 }
@@ -346,7 +354,7 @@ html{
 .ryth-sect-two ul li::before{
   content: "";
   position: absolute;
-  top: 5px;
+  top: 8px;
   left: -25px;
   width: 7px;
   height: 7px;
