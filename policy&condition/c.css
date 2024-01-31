@@ -1,0 +1,19 @@
+.paragraph{
+    padding-block: 12rem;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+@media (width < 990ox) {
+    .paragraph{
+        padding-block: 6rem;
+    }
+}
+.ryth-sect-two ul {
+    color: aliceblue;
+}
+a{
+    font-size: 13px;
+    color: var(--sky-blue);
+    font-family: GT America Extended;
+}

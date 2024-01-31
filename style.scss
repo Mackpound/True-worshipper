@@ -464,7 +464,10 @@ html{
            display: none;
         }
     }
- }
+    .menu-content::-webkit-scrollbar, .menu-content::-moz-scrollbar{
+     display: none;
+    }
+}
  .menu-container.active{
     position: fixed;
     opacity: 1;
