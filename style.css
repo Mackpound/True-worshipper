@@ -335,6 +335,7 @@ input {
 }
 .video-section img {
   object-fit: cover;
+  object-position: top;
   height: inherit;
   width: 100%;
   filter: brightness(80%);
