@@ -118,20 +118,6 @@ a::selection, img::selection, ::selection {
   padding: 20px;
 }
 
-img {
-  scale: 0.4;
-  opacity: 0.3;
-  animation: scaleOut linear forwards;
-  animation-timeline: view();
-  animation-range: entry;
-}
-
-@keyframes scaleOut {
-  to {
-    scale: 1 1;
-    opacity: 1;
-  }
-}
 button {
   border-radius: 20px;
   border: 0;
@@ -414,6 +400,9 @@ input {
   height: 100%;
 }
 .menu-container .menu-content .gather2 {
+  display: none;
+}
+.menu-container .menu-content::-webkit-scrollbar, .menu-container .menu-content::-moz-scrollbar {
   display: none;
 }
 
@@ -1607,7 +1596,7 @@ input {
 }
 .who-we-are-cont .cont .who-we-are-text-content h1 {
   width: 700px;
-  font-size: 100px;
+  font-size: 60px;
 }
 .who-we-are-cont .cont .who-we-are-text-content span {
   font-size: 15px;
@@ -1617,7 +1606,7 @@ input {
   font-family: GT America Expanded, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
   letter-spacing: 0.8px;
-  font-size: 17px;
+  font-size: 14px;
   margin-top: 18px;
   padding: 12px 0;
 }
@@ -1634,10 +1623,37 @@ input {
     font-size: 50px;
   }
   .who-we-are-cont .cont .who-we-are-text-content #link {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
+.para--text {
+  padding-block: 6rem;
+  padding-inline: 5rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+.para--text span {
+  font-family: Saol Display;
+  color: var(--black-russian);
+  font-size: 20px;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.35);
+}
+.para--text h5 {
+  font-family: Saol Display;
+  mix-blend-mode: difference;
+  color: var(--white);
+  font-size: 18px;
+}
+
+@media (width < 700px) {
+  .para--text {
+    padding-inline: 12px;
+  }
+}
 .founder-container {
   margin: 3rem 0;
   width: 100%;
@@ -1659,6 +1675,22 @@ input {
 .founder-container .founder-image img {
   height: 90%;
   width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.founder-container .leader-image {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-left: 7rem;
+}
+.founder-container .leader-image img {
+  height: 90%;
+  inline-size: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 .founder-container .founder-bio {
   width: 50%;
@@ -1689,6 +1721,7 @@ input {
   z-index: 1;
 }
 .founder-container .founder-bio span {
+  padding-top: 6rem;
   width: 60%;
   font-family: GT America Extended;
   color: var(--black-russian);
@@ -1712,7 +1745,16 @@ input {
   border-bottom: 1px solid var(--black);
 }
 
-@media (max-width: 990px) {
+@media (width < 1290px) {
+  .founder-container .founder-image img {
+    object-fit: cover;
+  }
+  .founder-container .founder-bio span {
+    width: 90%;
+    padding-top: 10rem;
+  }
+}
+@media (width < 990px) {
   .founder-container {
     padding: 1rem;
     height: 100%;
@@ -1722,31 +1764,102 @@ input {
   .founder-container .founder-image {
     width: 100%;
   }
+  .founder-container .founder-image img {
+    inline-size: 100%;
+  }
+  .founder-container .leader-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 12px;
+  }
+  .founder-container .leader-image img {
+    height: 90%;
+    inline-size: 50%;
+  }
   .founder-container .founder-bio {
     width: 100%;
   }
   .founder-container .founder-bio h6, .founder-container .founder-bio h1 {
     position: static;
   }
+  .founder-container .founder-bio h1 {
+    line-height: 40px;
+  }
   .founder-container .founder-bio span {
-    width: 80%;
+    padding-top: 1rem;
+    width: 100%;
   }
   .bb-absolute {
     display: none;
   }
 }
-.page-link {
+@media (width < 600px) {
+  .founder-container .leader-image {
+    width: 100%;
+    padding-left: 12px;
+  }
+  .founder-container .leader-image img {
+    height: 90%;
+    inline-size: 100%;
+  }
+}
+.start-center {
   display: flex;
-  width: 100%;
-  margin: 5rem 0;
+  flex-direction: column;
+  width: 95%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-block: 6rem;
+  color: var(--black-russian);
+}
+.start-center span {
+  font-family: GT America Extended;
+  font-size: 12px;
+  font-weight: 600;
+}
+.start-center h1 {
+  font-family: Saol Display;
+  font-weight: 600;
+  font-size: 60px;
+}
+.start-center p {
+  padding-top: 2rem;
+  width: 40%;
+  font-family: GT America Extended;
+  font-size: 14px;
+}
+@media (width < 800px) {
+  .start-center h1 {
+    font-size: 40px;
+  }
+  .start-center p {
+    width: 70%;
+  }
+}
+@media (width < 500px) {
+  .start-center p {
+    width: 80%;
+  }
+}
+
+.line-hr {
+  width: 90%;
+  margin-inline: auto;
+  margin-block: 6rem;
+  display: flex;
   justify-content: center;
   align-items: center;
+  height: 1px;
+  background: #ccc;
 }
-.page-link .page-link-content {
-  justify-self: center;
-  width: 90%;
-  background-color: #d9d9d9;
-  transform: skewY(-2deg);
+.line-hr i {
+  width: 30px;
+  background: #fff;
+  text-align: center;
 }
 
 .footer-container {

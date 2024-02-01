@@ -228,6 +228,18 @@ html{
     color: white;
     mix-blend-mode: difference;
   }
+  .head-link-3{
+    position: absolute;
+    bottom: 20px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    /* background: #000; */
+    z-index: 2;
+    color: white;
+    mix-blend-mode: difference;
+  }
   .head-text{
     display: flex;
     background: transparent;
@@ -242,6 +254,9 @@ html{
     }
     .head-link-2{
       bottom: -60px;
+    }
+    .head-link-3{
+      bottom: 20px;
     }
     .head-text{
       font-size: 40px;
