@@ -1596,25 +1596,28 @@ html{
         width: 100%;
         display: flex;
         align-items: center;
+        overflow: hidden;
         // flex-flow: column nowrap;
-
-        .content{
+        .bn{
             width: 100%;
-            display: grid;
+            display: block;
+            overflow: hidden;
+        }
+        .content{
+            width: inherit;
+            display: -ms-inline-grid;
+            display: inline-grid;
             grid-auto-flow: column;
-            // grid-auto-columns: 40%;
-            -webkit-grid-auto-columns: 60%;
-            // grid-auto-columns: 60%;
             gap: 20px;
             overflow: auto;
-            // background: green;
             padding:  0;
         }
+        
         .content::-webkit-scrollbar{
             display: none;
         }
         .x.mandatory-scroll-snapping{
-            width: 100%;
+            width: 150%;
            scroll-snap-type: x mandatory;
         }
             .intro{
@@ -1693,6 +1696,55 @@ html{
                 }
             }
         } 
+        }
+
+        @media (width < 1600px) {
+            .holster{
+             .bn{
+            .content{
+                width: 170%;
+            }
+           }
+         }
+        }
+        @media (width < 1200px) {
+            .holster{
+             .bn{
+            .content{
+                width: 190%;
+            }
+           }
+         }
+        }
+        @media (width < 1000px) {
+            .holster{
+             .bn{
+            .content{
+                width: 250%;
+            }
+         
+           }
+         }
+        }
+        @media (width < 500px) {
+            .holster{
+             .bn{
+            .content{
+                width: 400%;
+            }
+           
+           }
+         }
+        }
+        @media (width < 400px) {
+            .holster{
+             .bn{
+            .content{
+                width: 450%;
+            }
+           
+           }
+         }
         }
     .location-section{
         padding: 0.5rem 6rem;

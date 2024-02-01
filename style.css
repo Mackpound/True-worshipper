@@ -1455,12 +1455,18 @@ input {
   width: 100%;
   display: flex;
   align-items: center;
+  overflow: hidden;
+}
+.holster .bn {
+  width: 100%;
+  display: block;
+  overflow: hidden;
 }
 .holster .content {
-  width: 100%;
-  display: grid;
+  width: inherit;
+  display: -ms-inline-grid;
+  display: inline-grid;
   grid-auto-flow: column;
-  -webkit-grid-auto-columns: 60%;
   gap: 20px;
   overflow: auto;
   padding: 0;
@@ -1469,7 +1475,7 @@ input {
   display: none;
 }
 .holster .x.mandatory-scroll-snapping {
-  width: 100%;
+  width: 150%;
   scroll-snap-type: x mandatory;
 }
 .holster .intro {
@@ -1547,6 +1553,31 @@ input {
   }
 }
 
+@media (width < 1600px) {
+  .holster .bn .content {
+    width: 170%;
+  }
+}
+@media (width < 1200px) {
+  .holster .bn .content {
+    width: 190%;
+  }
+}
+@media (width < 1000px) {
+  .holster .bn .content {
+    width: 250%;
+  }
+}
+@media (width < 500px) {
+  .holster .bn .content {
+    width: 400%;
+  }
+}
+@media (width < 400px) {
+  .holster .bn .content {
+    width: 450%;
+  }
+}
 .location-section {
   padding: 0.5rem 6rem;
 }
