@@ -335,7 +335,6 @@ input {
 }
 .video-section img {
   object-fit: cover;
-  object-position: top;
   height: inherit;
   width: 100%;
   filter: brightness(80%);
@@ -680,6 +679,9 @@ input {
   }
 }
 @media screen and (max-width: 998px) {
+  .featured-container {
+    padding-top: 1rem;
+  }
   .featured-container .true-wosh-details {
     order: 0;
     width: 100%;

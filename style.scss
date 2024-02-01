@@ -388,7 +388,7 @@ html{
     }
     img{
         object-fit: cover;
-        object-position: top;
+        // object-position: top;
         height: inherit;
         width: 100%;
         filter: brightness(80%);
@@ -768,7 +768,7 @@ html{
      }
      @media screen and (max-width: 998px) {
         .featured-container{
-          
+          padding-top: 1rem;
            .true-wosh-details{
             order: 0;
             width: 100%;
