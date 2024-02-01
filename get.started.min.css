@@ -57,13 +57,38 @@
     background: var(--arial-black);
     margin-top: -60px;
 }
+.main-head .main-content .tw-text-img{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 600px;
+    padding: 4rem 1rem;
+    /* background: var(--arial-black); */
+    margin-top: -120px;
+}
 
 .main-head .main-content .tw-text-vid video{
     order: 1;
     width: 45%;
     height: 100%;
 }
+.main-head .main-content .tw-text-img img{
+    order: 1;
+    object-fit: cover;
+    width: 45%;
+    height: 100%;
+}
 .main-head .main-content .tw-text-vid .text-route{
+    order: 0;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: start;
+}
+.main-head .main-content .tw-text-img .text-route{
     order: 0;
     width: 40%;
     display: flex;
@@ -80,10 +105,12 @@
     font-weight: 100;
     font-size: 18px;
 }
-.text-route span{
+.text-route h6{
     width: 70%;
     font-family: GT America Extended;
+    font-size: 16px;
     color: #FFF;
+    font-weight: 100;
     mix-blend-mode: difference;
 }
 @media (width < 790px) {
@@ -99,11 +126,26 @@
         flex-direction: column;
         background: transparent;
     }
+    .main-head .main-content .tw-text-img{
+        height: 100%;
+        margin-top: -100px;
+        flex-direction: column;
+        background: transparent;
+    }
     .main-head .main-content .tw-text-vid video{
         order: 0;
         width: 100%;
     }
+    .main-head .main-content .tw-text-img img{
+        order: 0;
+        width: 100%;
+    }
     .main-head .main-content .tw-text-vid .text-route{
+        order: 1;
+        width: 100%;
+        /* background: #FFF; */
+    }
+    .main-head .main-content .tw-text-img .text-route{
         order: 1;
         width: 100%;
         /* background: #FFF; */
@@ -168,7 +210,7 @@
     margin: 7rem 0;
 }
 .welcometext{
-    padding: 1rem 2rem;
+    padding: 1rem 0rem ;
     order: 0;
     width: 40%;
     display: flex;
@@ -177,11 +219,17 @@
     justify-content: center;
 }
 .welcometext h1{
-   margin-left: -3rem;
+   margin-left: 0rem;
     font-family: saol display;
     font-size: 60px;
     color: #fFF;
     mix-blend-mode: difference;
+}
+.welcometext .d{
+    margin-right: -9rem;
+}
+.welcometext .s{
+    margin-left: -9rem;
 }
 .welcometext .innertext{
     width: 70%;
@@ -212,7 +260,7 @@
 
 .welcomeimage{
     orphans: 1;
-    width: 50%;
+    width: 60%;
 
 }
 .welcomeimage img{
@@ -232,8 +280,14 @@
     }
     .welcometext h1{
         text-align: left;
-        margin-left: -2rem;
+        margin-left: 0rem;
         font-size: 50px;
+    }
+    .welcometext .d{
+        margin-right: 0rem;
+    }
+    .welcometext .s{
+        margin-left: 0rem;
     }
     .welcomeimage{
         order: 0;

@@ -1464,8 +1464,7 @@ input {
 }
 .holster .content {
   width: inherit;
-  display: -ms-inline-grid;
-  display: inline-grid;
+  display: grid;
   grid-auto-flow: column;
   gap: 20px;
   overflow: auto;
