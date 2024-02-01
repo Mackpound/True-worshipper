@@ -140,7 +140,7 @@ input {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -724,13 +724,16 @@ input {
 }
 .update-banner-container .update-banner span {
   text-transform: uppercase;
-  letter-spacing: 1px;
   font-size: 12px;
   font-weight: 600;
   font-family: GT America Expanded;
 }
+.update-banner-container .update-banner p {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: GT America Extended;
+}
 .update-banner-container .update-banner a {
-  letter-spacing: 1px;
   font-size: 16px;
   font-weight: 600;
   font-family: GT America Expanded;

@@ -129,19 +129,19 @@ html{
     background-color: var(--sky-blue);
     padding: 20px;
    }
-   img{
-    // // pointer-events: none;
-    // transform-origin: right;
-    // // scale: 1;
-    // overflow: clip;
-    // opacity: 0;
-    // animation: scaleOut linear;
-    // animation-timeline: view();
-    // // animation-range-start: 100px;
-    // // animation-range-end: 100px;
-    // pointer-events: none;
-   }
-//    @keyframes scaleOut {
+//    img{
+//     // // pointer-events: none;
+//     // transform-origin: right;
+//     // // scale: 1;
+//     // overflow: clip;
+//     // opacity: 0;
+//     // animation: scaleOut linear;
+//     // animation-timeline: view();
+//     // // animation-range-start: 100px;
+//     // // animation-range-end: 100px;
+//     // pointer-events: none;
+//    }
+// //    @keyframes scaleOut {
 //     to{scale: 1.3; opacity: 1;}
 //    }
 
@@ -170,7 +170,7 @@ html{
 // ==========================
 
 ::-webkit-scrollbar{
-    width: 10px;
+    width: 8px;
 }
 ::-webkit-scrollbar-track{
     background: var(--light-dark);
@@ -815,13 +815,18 @@ html{
 
             span{
                 text-transform: uppercase;
-                letter-spacing: 1px;
+                // letter-spacing: 1px;
                 font-size: 12px;
                 font-weight: 600;
                 font-family:  GT America Expanded;
             }
+            p{
+                font-size: 14px;
+                font-weight: 400;
+                font-family:  GT America Extended;
+            }
             a{
-                letter-spacing: 1px;
+                // letter-spacing: 1px;
                 font-size: 16px;
                 font-weight: 600;
                 font-family:  GT America Expanded;
