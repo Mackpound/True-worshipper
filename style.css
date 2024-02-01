@@ -144,7 +144,7 @@ input {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--light-dark);
+  background-color: transparent;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   padding: 15px;
@@ -152,7 +152,7 @@ input {
 
 ::-webkit-scrollbar-thumb {
   background: var(--light-white);
-  border-radius: 0px;
+  border-radius: 4px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
@@ -336,6 +336,7 @@ input {
 .video-section img {
   object-fit: cover;
   height: inherit;
+  pointer-events: none;
   width: 100%;
   filter: brightness(80%);
 }
@@ -400,9 +401,6 @@ input {
   height: 100%;
 }
 .menu-container .menu-content .gather2 {
-  display: none;
-}
-.menu-container .menu-content::-webkit-scrollbar, .menu-container .menu-content::-moz-scrollbar {
   display: none;
 }
 
@@ -491,7 +489,6 @@ input {
   text-align: center;
   display: flex;
   justify-content: center;
-  padding-right: 13rem;
   align-items: center;
 }
 .menu-logo-section .gather p {
@@ -511,7 +508,6 @@ input {
   .menu-logo-section .gather {
     width: 450px;
     justify-content: start;
-    padding-right: 5rem;
   }
   .menu-logo-section .gather p {
     width: 450px;

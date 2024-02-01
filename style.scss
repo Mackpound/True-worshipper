@@ -173,7 +173,8 @@ html{
     width: 8px;
 }
 ::-webkit-scrollbar-track{
-    background: var(--light-dark);
+    // display: none;
+    background-color: transparent;
     // background: #f1f1f1;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -181,7 +182,7 @@ html{
 }
 ::-webkit-scrollbar-thumb{
     background: var(--light-white);
-    border-radius: 0px;
+    border-radius: 4px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
@@ -390,6 +391,7 @@ html{
         object-fit: cover;
         // object-position: top;
         height: inherit;
+        pointer-events: none;
         width: 100%;
         filter: brightness(80%);
     }
@@ -466,9 +468,7 @@ html{
            display: none;
         }
     }
-    .menu-content::-webkit-scrollbar, .menu-content::-moz-scrollbar{
-     display: none;
-    }
+   
 }
  .menu-container.active{
     position: fixed;
@@ -561,7 +561,7 @@ html{
             display: flex;
             // background-color: violet;
             justify-content: center;
-            padding-right: 13rem;
+            // padding-right: 13rem;
             align-items: center;
             p{
                 font-weight: bold;
@@ -581,7 +581,7 @@ html{
             .gather{
                 width: 450px;;
                 justify-content: start;
-                padding-right: 5rem;
+                // padding-right: 5rem;
                 p{
                     width: 450px;
                 }
